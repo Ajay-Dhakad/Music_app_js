@@ -92,7 +92,7 @@
             background-repeat: no-repeat;
             /* margin-top: 20px; */
             border-radius: 30px;
-            background-image: url('');
+       
             /* border: 2px solid rebeccapurple; */
             box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7),
 
@@ -244,7 +244,8 @@
 
     function playsong() {
 
-      
+        
+        playtime.value = '0'
 
         coverimg.style.backgroundImage = `url('${songsarr[currentindx].coverimg}')`
        
@@ -298,6 +299,7 @@
 
         song.addEventListener('timeupdate', (time) => {
 
+         
 let progress = parseInt((song.currentTime / song.duration) * 100)
 //    console.log(progress)
 
@@ -315,6 +317,8 @@ playtime.value = progress
 
     playsong()
 
+
+//---------------endfunc---------------------------------------------------------------------
 
 
 
@@ -340,13 +344,26 @@ currentindx = currentindx + 1
 song = new Audio('songs/' + songsarr[currentindx].name)
 
 
+if (song.paused || song.currentTime <= 0) {
+
+song.play()
+
+play.style.display = 'none'
+pause.style.display = 'block'
+
+}
+
+
 }
 playsong()
 
 })
 
 
-    prev.addEventListener('click', async () => {
+
+
+
+prev.addEventListener('click', async () => {
 
 
 
@@ -360,29 +377,38 @@ play.style.display = 'block'
 currentindx = currentindx - 1
 song = new Audio('songs/'+ songsarr[currentindx].name)
 
+//-----------------------------
 
 
+if (song.paused || song.currentTime <= 0) {
+
+
+
+song.play()
+
+play.style.display = 'none'
+pause.style.display = 'block'
 
 
 }
 
-
+}
 
 playsong()
 
 })
 
 
-    playtime.addEventListener('change', (e) => {
 
-        song.currentTime = ( playtime.value * song.duration ) / 100
+
+
+
+playtime.addEventListener('change', (e) => {
+
+song.currentTime = ( playtime.value * song.duration ) / 100
 
 })
 
-
-
-
-    // let b = document.createElement("audiow");     
 
 </script>
 
