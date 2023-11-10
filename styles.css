@@ -116,12 +116,28 @@ body {
 
 }
 
-.dim{
+/* .dim{
 
     animation: dim 2s infinite alternate-reverse;
+} */
+
+#volume{
+
+    margin-left:-10%;
+    width: 30px;
+    display: block;
 }
 
-@keyframes dim {
+#volslider{
+
+    /* rotate: -90deg; */
+    display: none;
+    margin-left:-10%;
+    rotate: -90deg;
+    width: 50px;
+}
+
+/* @keyframes dim {
 
     from {
 
@@ -139,7 +155,7 @@ body {
 
         
     }
-}
+} */
 
 @keyframes coverimg {
 

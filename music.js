@@ -45,7 +45,7 @@ function playsong() {
             play.style.display = 'none'
             pause.style.display = 'block'
             document.querySelector('.disc').style.display = 'block' 
-            coverimg.classList.add('dim')
+            // coverimg.classList.add('dim')
 
             //    console.log(songsarr[0].name)
             //    console.log(song.pause())
@@ -64,7 +64,7 @@ function playsong() {
         pause.style.display = 'none'
         play.style.display = 'block'
         document.querySelector('.disc').style.display = 'none'
-        coverimg.classList.remove('dim')
+        // coverimg.classList.remove('dim')
 
     
     })
@@ -181,5 +181,44 @@ playsong()
 playtime.addEventListener('change', (e) => {
 
 song.currentTime = ( playtime.value * song.duration ) / 100
+
+})
+
+
+//----------volume------------------
+
+let volume = document.getElementById('volume')
+let volslider  = document.getElementById('volslider')
+
+volume.addEventListener('click' , () => {
+
+
+    volume.style.display = 'none'
+    volslider.style.display = 'block'
+    
+    let vol = song.volume*100
+    volslider.value = vol
+
+    setTimeout(()=>{
+
+        volume.style.display = 'block'
+        volslider.style.display = 'none'
+
+
+    },5000)
+
+
+
+})
+
+
+
+volslider.addEventListener('change' , (e)=>{
+
+
+  song.volume = volslider.value/100
+
+   
+
 
 })
