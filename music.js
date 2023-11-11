@@ -8,7 +8,7 @@ let coverimg = document.querySelector('.coverimg')
 let title = document.querySelector('#title')
 
 
-let songsarr = [ { name: 'Time-Traveller(PagalWorldl).mp3', coverimg: 'https://i.scdn.co/image/ab67616d0000b27312688eea38599b12629a5f57' },{ name: "Mi-Amor(PagalWorldl).mp3", coverimg: 'https://i.ytimg.com/vi/HYb4FGDTBmw/maxresdefault.jpg' },{name:'tu-hai-kahaan.mp3',coverimg:'https://i.ytimg.com/vi/AX6OrbgS8lI/sddefault.jpg'},{name:'Way-Down-We-Go(PagalWorldl).mp3',coverimg:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjeZ_jFZK3WTbQKTbOmnrbzmbP8EyRSdfoqqo3U2Sqhq1UTdA7qYB3XAsc6e1vefyydQE&usqp=CAU'}]
+let songsarr = [ { name: 'Time-Traveller(PagalWorldl).mp3', coverimg: 'https://i.scdn.co/image/ab67616d0000b27312688eea38599b12629a5f57' },{ name: "Mi-Amor(PagalWorldl).mp3", coverimg: 'https://i.ytimg.com/vi/HYb4FGDTBmw/maxresdefault.jpg' },{name:'tu-hai-kahaan.mp3',coverimg:'https://i.ytimg.com/vi/AX6OrbgS8lI/sddefault.jpg'},{name:'Way-Down-We-Go(PagalWorldl).mp3',coverimg:'https://pbs.twimg.com/media/F09LH8QXsAUGYIx?format=jpg&name=large'}]
 
 
 
