@@ -79,6 +79,31 @@ let progress = parseInt((song.currentTime / song.duration) * 100)
 
 playtime.value = progress
 
+if (song.currentTime === song.duration){
+
+    currentindx += 1
+    song = new Audio('songs/' + songsarr[currentindx].name)
+    playsong()
+
+    
+if (song.paused || song.currentTime <= 0) {
+
+   
+    
+    play.style.display = 'none'
+    pause.style.display = 'block'
+    coverimg.style.display = 'block'
+    document.querySelector('.disc').style.display = 'block' 
+    song.play()
+    
+    
+    
+    
+    }
+    
+
+}
+
 
 
 })
@@ -210,7 +235,6 @@ volume.addEventListener('click' , () => {
 
 
 })
-
 
 
 volslider.addEventListener('change' , (e)=>{
