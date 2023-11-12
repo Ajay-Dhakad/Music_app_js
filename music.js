@@ -221,6 +221,7 @@ volume.addEventListener('click' , () => {
     volume.style.display = 'none'
     volslider.style.display = 'block'
     
+    
     let vol = song.volume*100
     volslider.value = vol
 
@@ -241,6 +242,12 @@ volslider.addEventListener('change' , (e)=>{
 
 
   song.volume = volslider.value/100
+  
+  if (volslider.value == 0){
+
+
+
+  }
 
    
 
