@@ -399,8 +399,21 @@ padding: 10px;
     
     text-wrap:nowrap;
     overflow: hidden;
+    animation: songappear 1.2s 1s 1 both;
     
 
+}
+
+@keyframes songappear{
+
+    from{
+        opacity: 0;
+       /* transform: translateX(10%); */
+    }
+    to{
+        opacity: 1;
+        
+    }
 }
 
 .song img{
