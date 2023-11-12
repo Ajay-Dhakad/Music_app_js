@@ -333,7 +333,7 @@ height: 90%;
 bottom: 0px;
 background-color: rgb(160, 160, 160);
 text-align: center;
-transition: .2s all;
+
 color: white;
 display: none;
 }
@@ -342,7 +342,7 @@ display: none;
 
 .playlistanim{
 
-    animation: playlists 1s 1 ;
+    animation: playlists .5s 1 ;
 }
 
 .pllsongs {
@@ -399,7 +399,7 @@ padding: 10px;
     
     text-wrap:nowrap;
     overflow: hidden;
-    animation: songappear 1.2s 1s 1 both;
+    animation: songappear 1s .7s 1 both;
     
 
 }
