@@ -331,7 +331,7 @@ z-index: 10;
 width: 100%;
 height: 90%;
 bottom: 0px;
-background-color: rgb(0, 0, 0);
+background-color: rgb(160, 160, 160);
 text-align: center;
 transition: .2s all;
 color: white;
@@ -348,12 +348,65 @@ display: none;
 .pllsongs {
 
     width: 100%;
-    height: 100px;
-    background-color: wheat;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;  
+    flex-direction: column;  
+    justify-content: start;
+    color: rgb(0, 0, 0);
+
+}
+
+.songs{
+
+/* border: 2px solid red; */
+width: 100%;
+height: 50%;
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: center;
+margin-top: 10px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 14px;
+padding: 10px;
+
+}
+
+#trendsong{
+
+    font-size: 35px;
+    color: rgb(17, 39, 34);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}   
+
+.song{
+
+    background-color: rgb(0, 0, 0);
+    width: 600px;
+    height: 60px;
+    margin-top: 10px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: black;
+    justify-content: flex-start;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    gap: 10px;
+    font-size: 11px;
+    
+    text-wrap:nowrap;
+    overflow: hidden;
+    
+
+}
+
+.song img{
+
+    width: 50px;
+    border-radius: 100px;
 }
 
 @keyframes playlists {
@@ -415,5 +468,7 @@ display: none;
 
         font-size: 22px;
     }
+
+    .song{width: 100%;font-size: 60%;}
 
 }
