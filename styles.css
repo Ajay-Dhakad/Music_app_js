@@ -399,10 +399,12 @@ padding: 10px;
     
     text-wrap:nowrap;
     overflow: hidden;
-    animation: songappear 1s .7s 1 both;
+    animation: songappear .7s .3s 1 both;
     
 
 }
+
+
 
 @keyframes songappear{
 

@@ -12,6 +12,7 @@ let songslist = document.querySelector('.songs')
 let songslistadd = ''
 
 
+
 let songsarr = [ { name: 'Time-Traveller(PagalWorldl).mp3', coverimg: 'https://i.scdn.co/image/ab67616d0000b27312688eea38599b12629a5f57' },{ name: "Mi-Amor(PagalWorldl).mp3", coverimg: 'https://i.ytimg.com/vi/HYb4FGDTBmw/maxresdefault.jpg' },{name:'tu-hai-kahaan.mp3',coverimg:'https://i.ytimg.com/vi/AX6OrbgS8lI/sddefault.jpg'},{name:'Way-Down-We-Go(PagalWorldl).mp3',coverimg:'https://pbs.twimg.com/media/F09LH8QXsAUGYIx?format=jpg&name=large'}]
 
 
@@ -24,16 +25,61 @@ function showplaylist(){
 
     songsarr.forEach((song,indx)=>{
 
-        console.log(indx)
+        // console.log(indx)
     
-        songslistadd += `<div id='${indx}' class="song"><img src="${song.coverimg}" alt=""><marquee scrollamount='0'><h1>#${indx+1} ${song.name.replace('.mp3','')}</h1></marquee></div>`
+        songslistadd += `<div id='${indx}'  class="song"><img id='${indx}' src="${song.coverimg}" alt=""><h1 id='${indx}'>#${indx+1} ${song.name.replace('.mp3','')}</h1></div>`
     
     })
-    
+
     songslist.innerHTML = songslistadd
 
+    
 }
 showplaylist()
+
+
+function playlistsongsplay(){
+    let songs = document.querySelectorAll('.song')
+    
+    songs.forEach((elem) => {
+
+        // console.log(elem.)
+
+        elem.addEventListener('click',(e) => {
+
+            song.pause()
+
+            currentindx = e.target.id
+            song = new Audio('songs/' + songsarr[currentindx].name)
+            playsong()
+        
+            
+        if (song.paused || song.currentTime <= 0) {
+        
+           
+            playlists.style.display = 'none'
+            menu.classList.replace('ri-menu-4-line','ri-menu-line')
+            play.style.display = 'none'
+            pause.style.display = 'block'
+            coverimg.style.display = 'block'
+            document.querySelector('.disc').style.display = 'block' 
+            song.play()
+            
+            
+            
+            
+            }
+            
+            
+
+        })
+     
+    })
+
+}
+
+playlistsongsplay()
+
 
 
 //------------FUNCTION TO PLAY SONGS-----------------------
@@ -299,3 +345,6 @@ else{
 
 
 })
+
+ 
+ 
