@@ -6,6 +6,8 @@ let next = document.querySelector('#next')
 let playtime = document.querySelector('#playtime')
 let coverimg = document.querySelector('.coverimg')
 let title = document.querySelector('#title')
+let menu = document.querySelector('#menu')
+let playlists = document.querySelector('.playlists')
 
 
 let songsarr = [ { name: 'Time-Traveller(PagalWorldl).mp3', coverimg: 'https://i.scdn.co/image/ab67616d0000b27312688eea38599b12629a5f57' },{ name: "Mi-Amor(PagalWorldl).mp3", coverimg: 'https://i.ytimg.com/vi/HYb4FGDTBmw/maxresdefault.jpg' },{name:'tu-hai-kahaan.mp3',coverimg:'https://i.ytimg.com/vi/AX6OrbgS8lI/sddefault.jpg'},{name:'Way-Down-We-Go(PagalWorldl).mp3',coverimg:'https://pbs.twimg.com/media/F09LH8QXsAUGYIx?format=jpg&name=large'}]
@@ -250,6 +252,31 @@ volslider.addEventListener('change' , (e)=>{
   }
 
    
+
+
+})
+
+
+
+menu.addEventListener('click',() => {
+
+if (playlists.style.display == 'block'){
+
+    playlists.style.display = 'none'
+    playlists.classList.add('playlistanim')
+    menu.classList.replace('ri-menu-4-line','ri-menu-line')
+  
+    
+
+}
+
+else{
+
+    playlists.style.display = 'block'
+    playlists.classList.add('playlistanim')
+  
+    menu.classList.replace('ri-menu-line','ri-menu-4-line')
+}
 
 
 })
