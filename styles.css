@@ -101,7 +101,7 @@ to{
     align-items: center;
     gap: 10px;
     /* border: 2px solid red; */
-    margin-top: 5%;
+    margin-top: 3%;
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.888);
     border-radius: 20px;
@@ -343,7 +343,7 @@ padding: 10px;
 #trendsong{
 
     font-size: 35px;
-    color: rgb(17, 39, 34);
+    color: rgb(39, 16, 36);
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-decoration: underline;
 }   
@@ -353,22 +353,28 @@ padding: 10px;
 
     background-color: rgb(0, 0, 0);
     width: 600px;
-    height: 60px;
+    height: 90px;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 5px;
     color: rgb(255, 255, 255);
-    gap: 10px;
-    font-size: 11px;
+    gap: 5px;
+    font-size: 10px;
     cursor: pointer;
     text-wrap:nowrap;
     overflow: hidden;
     animation: songappear .7s .3s 1 both;
+    transition: .5s;
     
 
+}
+
+.song:hover{
+
+    transform: translateX(10px);
 }
 
 
@@ -451,6 +457,6 @@ padding: 10px;
         font-size: 22px;
     }
 
-    .song{width: 100%;font-size: 60%;}
+    .song{width: 100%;font-size: 57%;}
 
 }
