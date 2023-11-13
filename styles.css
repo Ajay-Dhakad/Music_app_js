@@ -397,7 +397,7 @@ padding: 10px;
     color: rgb(255, 255, 255);
     gap: 10px;
     font-size: 11px;
-    
+    cursor: pointer;
     text-wrap:nowrap;
     overflow: hidden;
     animation: songappear .7s .3s 1 both;

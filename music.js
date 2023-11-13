@@ -49,7 +49,9 @@ function playlistsongsplay(){
 
             song.pause()
 
-            currentindx = e.target.id
+            currentindx = Number.parseInt(e.target.id)
+            
+            // console.log(typeof currentindx)
             song = new Audio('songs/' + songsarr[currentindx].name)
             playsong()
         
@@ -190,7 +192,7 @@ next.addEventListener('click',  () => {
 
 // song.pause()
 let indx = currentindx + 1
-if(indx<songsarr.length){
+if(indx<=songsarr.length-1){
 song.pause()
 pause.style.display = 'none'
 play.style.display = 'block'
@@ -310,15 +312,6 @@ volslider.addEventListener('change' , (e)=>{
 
   song.volume = volslider.value/100
   
-  if (volslider.value == 0){
-
-
-
-  }
-
-   
-
-
 })
 
 
