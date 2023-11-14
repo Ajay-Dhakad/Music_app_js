@@ -52,6 +52,8 @@ body {
 
     width: 80px;
     animation: logo 1s alternate-reverse infinite;
+    
+    
 
 }
 
@@ -72,7 +74,21 @@ to{
 
     font-size: 25px;
     color: rgb(255, 0, 162);
+    animation: headname 1.2s both 1;
 }
+
+
+@keyframes headname {
+    from{
+    
+       
+       
+        opacity: 0;
+    }    
+    to{
+    
+opacity: 1;    }
+    }
 
 .container nav div {
 
@@ -88,6 +104,7 @@ to{
     margin-left: 10px;
     font-weight: bolder;
     transition: .5s all;
+
 
 }
 

@@ -214,9 +214,17 @@ play.style.display = 'none'
 pause.style.display = 'block'
 coverimg.style.display = 'block'
 document.querySelector('.disc').style.display = 'block' 
+playtime.style.opacity = 0
 
+if (song.played){  
 
+    setTimeout(() => {
 
+        playtime.style.opacity = 1
+
+    },500)
+
+}
 
 }
 
@@ -247,7 +255,7 @@ song = new Audio('songs/'+ songsarr[currentindx].name)
 
 if (song.paused || song.currentTime <= 0) {
 
-
+    playtime.style.opacity = 0
 
 song.play()
 
@@ -257,6 +265,18 @@ playtime.value = 0
 document.querySelector('.disc').style.display = 'block' 
 
 
+if (song.played){
+
+    setTimeout(() =>  {
+
+        playtime.style.opacity = 1
+
+    },500)
+
+  
+
+
+}
 
 
 }
