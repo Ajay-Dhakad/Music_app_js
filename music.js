@@ -144,7 +144,7 @@ function playsong() {
 
      
 let progress = parseInt((song.currentTime / song.duration) * 100)
-//    console.log(progress)
+//    console.log((song.currentTime/song.duration)*100)
 
 playtime.value = progress
 
@@ -197,7 +197,7 @@ song.pause()
 pause.style.display = 'none'
 play.style.display = 'block'
 coverimg.style.display = 'none'
-
+    
 
 currentindx = currentindx + 1
 song = new Audio('songs/' + songsarr[currentindx].name)
